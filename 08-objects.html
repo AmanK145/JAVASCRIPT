@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>
-      Functions
+      Objects
     </title>
      
   </head>
@@ -21,8 +21,25 @@
        console.log(product);
        delete product.newProperty*/
        const product2={
-        name : 'shirt'
+        name : 'shirt',
+        'delivery-time':'1 day',
+        //Nested Objects
+        rating:{
+          stars:4.5,count:87
+        },
+        fun:function function1(){
+        console.log('function inside object');        
+        }
        };
+       console.log(product2);
+       console.log(product2.name);
+       console.log(product2['name']);
+       //bracket notation
+       console.log(product2['delivery-time']);
+       console.log(product2.rating.count);
+       product2.fun();
+
+       console.log(JSON.stringify(product2));
       </script>
   </body>
 </html>
